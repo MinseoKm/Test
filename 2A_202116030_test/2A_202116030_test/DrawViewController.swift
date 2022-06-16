@@ -1,9 +1,4 @@
-//
-//  ViewController.swift
-//  DrawGraphics
-//
-//  Created by HwangSeungyeon on 2020/09/17.
-//
+
 
 import UIKit
 
