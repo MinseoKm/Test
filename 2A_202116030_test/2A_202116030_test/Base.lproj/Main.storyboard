@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6QG-eq-Se5">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZXi-dK-aFZ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="6QG-eq-Se5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dVn-c5-9Ya">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0yA-fT-O1O" kind="relationship" relationship="viewControllers" id="MO4-jN-MFQ"/>
+                        <segue destination="OnJ-MG-K5z" kind="relationship" relationship="viewControllers" id="LyL-Ui-8G0"/>
+                        <segue destination="qeP-LM-GwV" kind="relationship" relationship="viewControllers" id="rfh-JK-Ye8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zid-C4-gv9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29.23076923076923" y="69.66824644549763"/>
+        </scene>
+        <!--그림판-->
+        <scene sceneID="br7-BQ-yNU">
+            <objects>
+                <viewController id="0yA-fT-O1O" customClass="SketchViewController" customModule="_A_202116030_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zLv-H2-bXv">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="DcW-AV-ZKX">
+                                <rect key="frame" x="16" y="44" width="358" height="717"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="2n3-7y-kGZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="358" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dda-5m-pD7">
+                                                <rect key="frame" x="0.0" y="0.0" width="59.666666666666664" height="30"/>
+                                                <state key="normal" title="검은색">
+                                                    <color key="titleColor" systemColor="labelColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnChangeLineColorBlack:" destination="0yA-fT-O1O" eventType="touchUpInside" id="fhL-5V-zxH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nvV-cu-y5X">
+                                                <rect key="frame" x="59.666666666666671" y="0.0" width="59.666666666666671" height="30"/>
+                                                <state key="normal" title="빨간색">
+                                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnChangeLineColorRed:" destination="0yA-fT-O1O" eventType="touchUpInside" id="Toj-3Q-gIG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ggz-S9-zzh">
+                                                <rect key="frame" x="119.33333333333336" y="0.0" width="59.666666666666671" height="30"/>
+                                                <state key="normal" title="녹색">
+                                                    <color key="titleColor" systemColor="systemGreenColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnChangeLineColorGreen:" destination="0yA-fT-O1O" eventType="touchUpInside" id="wCW-2D-D1V"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gw-vv-LG6">
+                                                <rect key="frame" x="179" y="0.0" width="59.666666666666657" height="30"/>
+                                                <state key="normal" title="파란색">
+                                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="btnChangeLineColorBlue:" destination="0yA-fT-O1O" eventType="touchUpInside" id="orc-xN-yBA"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="두께" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RiH-wG-Fv9">
+                                                <rect key="frame" x="238.66666666666666" y="0.0" width="59.666666666666657" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kmC-zj-yUF">
+                                                <rect key="frame" x="298.33333333333331" y="0.0" width="59.666666666666686" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="txtDidEndOnExit:" destination="0yA-fT-O1O" eventType="editingDidEndOnExit" id="WMx-0d-9u6"/>
+                                                    <action selector="txtEditChanged:" destination="0yA-fT-O1O" eventType="editingChanged" id="DOC-No-VID"/>
+                                                    <action selector="txtTouchDown:" destination="0yA-fT-O1O" eventType="editingDidEnd" id="gxk-gd-VVT"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="7Yj-9I-Jg8"/>
+                                        </constraints>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ts8-AG-5CS">
+                                        <rect key="frame" x="0.0" y="30" width="358" height="647"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgD-Sh-yBo">
+                                        <rect key="frame" x="0.0" y="677" width="358" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="rjQ-tX-Ijm"/>
+                                        </constraints>
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearImageView:" destination="0yA-fT-O1O" eventType="touchUpInside" id="0WV-a2-NrE"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Nbq-BA-6cP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DcW-AV-ZKX" firstAttribute="leading" secondItem="Nbq-BA-6cP" secondAttribute="leading" constant="16" id="QFi-o7-In8"/>
+                            <constraint firstItem="DcW-AV-ZKX" firstAttribute="top" secondItem="Nbq-BA-6cP" secondAttribute="top" id="agb-Mb-n18"/>
+                            <constraint firstItem="Nbq-BA-6cP" firstAttribute="bottom" secondItem="DcW-AV-ZKX" secondAttribute="bottom" id="g3Y-oF-8zC"/>
+                            <constraint firstItem="Nbq-BA-6cP" firstAttribute="trailing" secondItem="DcW-AV-ZKX" secondAttribute="trailing" constant="16" id="m2J-Un-uBE"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="그림판" id="h2G-0V-3TJ"/>
+                    <connections>
+                        <outlet property="imgView" destination="Ts8-AG-5CS" id="mgW-tR-zfP"/>
+                        <outlet property="txtLineSize" destination="kmC-zj-yUF" id="lWc-9B-y4r"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T2b-Jt-JwR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1068" y="384"/>
+        </scene>
+        <!--계산기-->
+        <scene sceneID="QNM-a4-Fai">
+            <objects>
+                <viewController id="OnJ-MG-K5z" customClass="CalculatorViewController" customModule="_A_202116030_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YE5-uk-J5J">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7yX-y1-pYL" colorLabel="IBBuiltInLabel-Yellow">
+                                <rect key="frame" x="24" y="68" width="342" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="Flx-qw-oLJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGG-Gc-0Wa">
+                                <rect key="frame" x="24" y="242" width="342" height="495"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PyJ-LM-ELs">
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="440.66666666666669"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nbn-k5-7rl">
+                                                <rect key="frame" x="0.0" y="0.0" width="342" height="81.666666666666671"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hkv-c3-zj2" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="255.33333333333334" height="81.666666666666671"/>
+                                                        <color key="backgroundColor" red="0.64705882349999999" green="0.64705882349999999" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="AC">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnClear:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="kt0-LD-bUl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTz-yN-obT" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="260.33333333333331" y="0.0" width="81.666666666666686" height="81.666666666666671"/>
+                                                        <color key="backgroundColor" red="0.99607843139999996" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="nTz-yN-obT" secondAttribute="height" multiplier="1:1" id="Yfn-Ce-bER"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="÷">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnDivide:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="nW4-ag-tSF"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Jfq-GI-hPm">
+                                                <rect key="frame" x="0.0" y="89.666666666666686" width="342" height="82"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBa-sa-kCX" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="82"/>
+                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="uBa-sa-kCX" secondAttribute="height" multiplier="1:1" id="Jcb-Vt-7dh"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="7"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnNumber:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="QSK-PP-7NU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fD5-LP-0Hj" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="86.666666666666671" y="0.0" width="82.000000000000014" height="82"/>
+                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="fD5-LP-0Hj" secondAttribute="height" multiplier="1:1" id="qhd-ku-Ifc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="8"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnNumber:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="iyw-pL-a4G"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHj-IG-A9k" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="173.66666666666666" y="0.0" width="81.666666666666657" height="82"/>
+                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="xHj-IG-A9k" secondAttribute="height" multiplier="1:1" id="dXR-px-U0H"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="9"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnNumber:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="fv5-fT-pW1"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b27-a2-4j6" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="260.33333333333331" y="0.0" width="81.666666666666686" height="82"/>
+                                                        <color key="backgroundColor" red="0.99607843139999996" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="b27-a2-4j6" secondAttribute="height" multiplier="1:1" id="18C-KS-nFB"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="×">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnMultiply:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="svI-0K-AZa"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="obU-tr-DFf">
+                                                <rect key="frame" x="0.0" y="179.66666666666669" width="342" height="81.666666666666686"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gsb-TJ-BcR" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="81.666666666666671"/>
+                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="Gsb-TJ-BcR" secondAttribute="height" multiplier="1:1" id="QJq-R8-6jW"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="4"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnNumber:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="BSe-rB-yfv"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Q7-HQ-hpx" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="86.666666666666671" y="0.0" width="82.000000000000014" height="81.666666666666671"/>
+                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="0Q7-HQ-hpx" secondAttribute="height" multiplier="1:1" id="cwu-dc-mK6"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="5"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnNumber:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="uyE-nT-wpt"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWl-Ff-HmM" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="173.66666666666666" y="0.0" width="81.666666666666657" height="81.666666666666671"/>
+                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="ZWl-Ff-HmM" secondAttribute="height" multiplier="1:1" id="phn-KU-Ved"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="6"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnNumber:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="wF6-77-NWW"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qAt-ZQ-h5C" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="260.33333333333331" y="0.0" width="81.666666666666686" height="81.666666666666671"/>
+                                                        <color key="backgroundColor" red="0.99607843139999996" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="qAt-ZQ-h5C" secondAttribute="height" multiplier="1:1" id="8Wf-Ji-eiB"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="-"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnSubtract:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="Iy8-pA-Mwc"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="XoO-4E-kcR">
+                                                <rect key="frame" x="0.0" y="269.33333333333331" width="342" height="81.666666666666686"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6cB-8W-Ier" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="81.666666666666671" height="81.666666666666671"/>
+                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="6cB-8W-Ier" secondAttribute="height" multiplier="1:1" id="TNl-lL-j0q"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="1"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnNumber:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="PSB-iC-TiB"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCI-8n-Vuo" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="86.666666666666671" y="0.0" width="82.000000000000014" height="81.666666666666671"/>
+                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="MCI-8n-Vuo" secondAttribute="height" multiplier="1:1" id="Z5B-x0-dFO"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="2"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnNumber:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="deS-sl-Bjd"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tR4-Em-vPe" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="173.66666666666666" y="0.0" width="81.666666666666657" height="81.666666666666671"/>
+                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="tR4-Em-vPe" secondAttribute="height" multiplier="1:1" id="UMd-1r-08s"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="3"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnNumber:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="jq0-0H-ITN"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlK-VA-38A" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="260.33333333333331" y="0.0" width="81.666666666666686" height="81.666666666666671"/>
+                                                        <color key="backgroundColor" red="0.99607843139999996" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="dlK-VA-38A" secondAttribute="height" multiplier="1:1" id="M8D-F1-xgM"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="+"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnAdd:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="bUg-Zb-s7G"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="cg8-EV-mPC">
+                                                <rect key="frame" x="0.0" y="359" width="342" height="81.666666666666686"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flz-FQ-9EK" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="168.66666666666666" height="81.666666666666671"/>
+                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="0"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnNumber:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="yIl-yv-jwl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIg-v1-SlD" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="173.66666666666666" y="0.0" width="81.666666666666657" height="81.666666666666671"/>
+                                                        <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="LIg-v1-SlD" secondAttribute="height" multiplier="1:1" id="yAL-ri-tIS"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="."/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnDot:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="P4N-oK-HUI"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZ9-WJ-JoD" customClass="RoundButton" customModule="_A_202116030_test" customModuleProvider="target">
+                                                        <rect key="frame" x="260.33333333333331" y="0.0" width="81.666666666666686" height="81.666666666666671"/>
+                                                        <color key="backgroundColor" red="0.99607843139999996" green="0.62745098040000002" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" secondItem="aZ9-WJ-JoD" secondAttribute="height" multiplier="1:1" id="J9m-xl-GaW"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                                        <state key="normal" title="="/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isRound" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="tapBtnEqual:" destination="OnJ-MG-K5z" eventType="touchUpInside" id="G9E-u6-ngg"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="obU-tr-DFf" firstAttribute="height" secondItem="nbn-k5-7rl" secondAttribute="height" id="0Xd-T5-oxe"/>
+                                            <constraint firstItem="Flz-FQ-9EK" firstAttribute="trailing" secondItem="MCI-8n-Vuo" secondAttribute="trailing" id="A1A-nM-lGk"/>
+                                            <constraint firstItem="XoO-4E-kcR" firstAttribute="height" secondItem="nbn-k5-7rl" secondAttribute="height" id="TtM-LF-5L0"/>
+                                            <constraint firstItem="cg8-EV-mPC" firstAttribute="height" secondItem="nbn-k5-7rl" secondAttribute="height" id="bca-wn-Omb"/>
+                                            <constraint firstItem="Hkv-c3-zj2" firstAttribute="trailing" secondItem="xHj-IG-A9k" secondAttribute="trailing" id="iDi-LC-R0u"/>
+                                            <constraint firstItem="Jfq-GI-hPm" firstAttribute="height" secondItem="nbn-k5-7rl" secondAttribute="height" id="pew-JZ-yn1"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="PyJ-LM-ELs" secondAttribute="bottom" priority="750" id="IB7-Uf-vUN"/>
+                                    <constraint firstItem="PyJ-LM-ELs" firstAttribute="top" secondItem="YGG-Gc-0Wa" secondAttribute="top" id="ICD-Wr-g24"/>
+                                    <constraint firstAttribute="trailing" secondItem="PyJ-LM-ELs" secondAttribute="trailing" id="Qv3-3X-CMZ"/>
+                                    <constraint firstItem="PyJ-LM-ELs" firstAttribute="leading" secondItem="YGG-Gc-0Wa" secondAttribute="leading" id="ubw-VA-nF3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="iRz-H5-uyg"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YGG-Gc-0Wa" firstAttribute="leading" secondItem="iRz-H5-uyg" secondAttribute="leading" constant="24" id="EM8-0g-VIk"/>
+                            <constraint firstItem="iRz-H5-uyg" firstAttribute="trailing" secondItem="YGG-Gc-0Wa" secondAttribute="trailing" constant="24" id="bk4-q1-qim"/>
+                            <constraint firstItem="7yX-y1-pYL" firstAttribute="leading" secondItem="iRz-H5-uyg" secondAttribute="leading" constant="24" id="muF-8u-Ga0"/>
+                            <constraint firstItem="7yX-y1-pYL" firstAttribute="top" secondItem="iRz-H5-uyg" secondAttribute="top" constant="24" id="mzq-M2-XNy"/>
+                            <constraint firstItem="YGG-Gc-0Wa" firstAttribute="top" secondItem="7yX-y1-pYL" secondAttribute="bottom" constant="24" id="nrb-4T-vqw"/>
+                            <constraint firstItem="iRz-H5-uyg" firstAttribute="bottom" secondItem="YGG-Gc-0Wa" secondAttribute="bottom" constant="24" id="wEa-gc-IXe"/>
+                            <constraint firstItem="iRz-H5-uyg" firstAttribute="trailing" secondItem="7yX-y1-pYL" secondAttribute="trailing" constant="24" id="zsR-XJ-eLD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="계산기" id="A0q-Da-cZH"/>
+                    <connections>
+                        <outlet property="lblNumberOutput" destination="7yX-y1-pYL" id="WdH-lS-iS1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPC-qB-1ru" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1894" y="-6"/>
+        </scene>
+        <!--명언-->
+        <scene sceneID="Adu-Pw-xCm">
+            <objects>
+                <viewController id="qeP-LM-GwV" customClass="QuoteGeneratorViewController" customModule="_A_202116030_test" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qwI-Vs-1qd">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="명언 생성기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FkC-8G-LpU">
+                                <rect key="frame" x="24" y="68" width="342" height="25.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W4X-7p-afw">
+                                <rect key="frame" x="24" y="378.66666666666669" width="342" height="36"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="명언 생성">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="tabQuoteGeneratorButton:" destination="qeP-LM-GwV" eventType="touchUpInside" id="2HT-eh-FHM"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="64m-WQ-8xL">
+                                <rect key="frame" x="24" y="118.66666666666669" width="342" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="명언 생성을 눌러주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvs-n3-OlP">
+                                        <rect key="frame" x="20" y="19.999999999999986" width="302" height="119.00000000000001"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="명언 생성을 눌러주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmB-UD-HlH">
+                                        <rect key="frame" x="20" y="159" width="302" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Pvs-n3-OlP" firstAttribute="top" secondItem="64m-WQ-8xL" secondAttribute="top" constant="20" id="4Ka-1X-acr"/>
+                                    <constraint firstItem="hmB-UD-HlH" firstAttribute="leading" secondItem="64m-WQ-8xL" secondAttribute="leading" constant="20" id="6H3-co-Pfx"/>
+                                    <constraint firstItem="Pvs-n3-OlP" firstAttribute="leading" secondItem="64m-WQ-8xL" secondAttribute="leading" constant="20" id="EZp-3W-oH0"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pvs-n3-OlP" secondAttribute="trailing" constant="20" id="EyV-7b-2C1"/>
+                                    <constraint firstAttribute="bottom" secondItem="hmB-UD-HlH" secondAttribute="bottom" constant="20" id="bOe-ZT-Y3O"/>
+                                    <constraint firstItem="hmB-UD-HlH" firstAttribute="top" secondItem="Pvs-n3-OlP" secondAttribute="bottom" constant="20" id="erb-WD-BGD"/>
+                                    <constraint firstAttribute="trailing" secondItem="hmB-UD-HlH" secondAttribute="trailing" constant="20" id="lxo-4a-ZGb"/>
+                                    <constraint firstAttribute="height" constant="200" id="pFN-WQ-9hm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OMl-SK-kkP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OMl-SK-kkP" firstAttribute="trailing" secondItem="FkC-8G-LpU" secondAttribute="trailing" constant="24" id="79X-v8-FLA"/>
+                            <constraint firstItem="OMl-SK-kkP" firstAttribute="trailing" secondItem="64m-WQ-8xL" secondAttribute="trailing" constant="24" id="J9o-A1-OES"/>
+                            <constraint firstItem="FkC-8G-LpU" firstAttribute="leading" secondItem="OMl-SK-kkP" secondAttribute="leading" constant="24" id="RJ4-W7-R0B"/>
+                            <constraint firstItem="64m-WQ-8xL" firstAttribute="top" secondItem="FkC-8G-LpU" secondAttribute="bottom" constant="25" id="SwO-qn-yAr"/>
+                            <constraint firstItem="FkC-8G-LpU" firstAttribute="top" secondItem="OMl-SK-kkP" secondAttribute="top" constant="24" id="Veh-sp-KJY"/>
+                            <constraint firstItem="64m-WQ-8xL" firstAttribute="leading" secondItem="OMl-SK-kkP" secondAttribute="leading" constant="24" id="fDv-dp-zty"/>
+                            <constraint firstItem="W4X-7p-afw" firstAttribute="top" secondItem="64m-WQ-8xL" secondAttribute="bottom" constant="60" id="iXy-Vf-Kwl"/>
+                            <constraint firstItem="OMl-SK-kkP" firstAttribute="trailing" secondItem="W4X-7p-afw" secondAttribute="trailing" constant="24" id="prW-4a-joT"/>
+                            <constraint firstItem="W4X-7p-afw" firstAttribute="leading" secondItem="OMl-SK-kkP" secondAttribute="leading" constant="24" id="ukJ-30-8tf"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="명언" id="AhU-2r-0Bv"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="hmB-UD-HlH" id="Afa-g4-0jJ"/>
+                        <outlet property="quoteLabel" destination="Pvs-n3-OlP" id="s3h-uY-Uqc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1KV-D9-qhs" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="515" y="-1053"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
