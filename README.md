@@ -14,6 +14,7 @@
 > C언어를 참고해 프로그램을 만들었습니다.
 
 ***
+
 * 그림판
 
 ```
@@ -24,6 +25,30 @@
 바로 전에 터치하거나 이동한 위치를 선언합니다.
 선의 두께를 2.0으로 설정합니다.
 선의 색상을 빨간색으로 설정합니다.
+
+```
+@IBAction func btnLineBlack(_ sender: UIButton) {
+        lineColor = UIColor.black.cgColor
+    }
+    
+    @IBAction func btnLineRed(_ sender: UIButton) {
+        lineColor = UIColor.red.cgColor
+    }
+    
+    @IBAction func btnLineGreen(_ sender: UIButton) {
+        lineColor = UIColor.green.cgColor
+    }
+    
+    @IBAction func btnLineBule(_ sender: UIButton) {
+        lineColor = UIColor.blue.cgColor
+    }
+    
+    @IBAction func btnLineWidth(_ sender: UIButton) {
+        lineSize = CGFloat((txfLineWidth.text! as NSString).floatValue)
+    }
+    
+```
+검정, 빨강, 초록, 파랑 색상 추가하고 두께 기능을 설정합니다.
 
 ```
     @IBAction func clearImageView(_ sender: UIButton) {
@@ -74,7 +99,7 @@ lastPoint에서 currPoint까지 선을 추가합니다.
 ```
 폰을 흔드는 모션이 발생하면 이미지 뷰의 이미지를 삭제합니다.    
 
-
+***
 
 * 계산기
 
@@ -177,6 +202,35 @@ self.firstOperand = self.displayNumber는 화면에 표시된 피연산자입니
 self.currentOperation = operation은 선택한 연산자입니다.
 self.displayNumber = ""는 첫 번째 피연산자를 해당 프로퍼티에 할당했으므로 초기화하고. 두 번째 피연산자를 받기 위해 넣었습니다.
 
+***
+
+* 명언
+
+```
+let quotes = [
+        Quote(contents:"죽음을 두려워하는 나머지 삶을 시작조차 못하는 사람이 많다.", name:"벤다이크"),
+        Quote(contents:"나는 나 자신을 빼 놓고는 모두 안다.", name:"이용"),
+        Quote(contents:"편견이란 실효성이 없는 의견이다.", name:"임브로스 빌"),
+        Quote(contents:"죽음을 두려워하는 나머지 삶을", name:"이크"),
+        Quote(contents:"시작조차 못하는 사람이 많다.", name:"벤다"),
+    ]
+```
+버튼을 클릭하면 나올 수 있도록 문구와 이름을 지정해 5가지의 명언을 만듭니다.
+
+```
+let random = Int(arc4random_uniform(5))
+        let quotes_instance = quotes[random]
+        self.nameLabel.text = quotes_instance.name
+        self.quoteLabel.text = quotes_instance.contents
+```
+0~4 사이의 난수를 생성합니다.
+버튼을 클릭 시 나타날 명언을 랜덤으로 설정합니다.
+
+*** 
+    
+
+* 후기
+    아이폰에 있는 앱을 모아 하나의 앱을 만들면 어떨까? 라는 생각에서 시작되어 세 개의 앱을 합쳐 하나의 어플리케이션으로 만들었습니다. 표현하고 싶은 부분들이 많았지만 아직은 미숙한지라 엉성하게 만드는 것 밖에 못했습니다. 하지만 게속 수정판을 올려나가면서 하나의 완성된 작품을 만들 수 있는 날까지 노력해야겠다는 마음이 생겼습니다. 그리고 swift가 C언어와 겹치는 부분이 많다고 느꼈습니다. 어플을 제작하는데 제일 어려움을 겪었던 어플은 계산기였습니다. 이런 계산기 하나에 여러 복잡한 코드가 들어간다는 것에 게산기가 대단해 보일 정도입니다. 다른 github 회원분들의 게시글을 보며 저도 자주 어플들을 만들고 접해서 저만의 창작물을 만들어 playstore에 올리고 싶다는 욕심이 생겼습니다.   
 
 * 참고 서적  
 
