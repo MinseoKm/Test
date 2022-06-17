@@ -22,9 +22,9 @@
     var lineSize: CGFloat = 2.0
     var lineColor = UIColor.red.cgColor
 ```
-바로 전에 터치하거나 이동한 위치를 선언합니다.
-선의 두께를 2.0으로 설정합니다.
-선의 색상을 빨간색으로 설정합니다.
+바로 전에 터치하거나 이동한 위치를 선언합니다.  
+선의 두께를 2.0으로 설정합니다.     
+선의 색상을 빨간색으로 설정합니다.     
 
 ```
 @IBAction func btnLineBlack(_ sender: UIButton) {
@@ -60,7 +60,7 @@
         let touch = touches.first! as UITouch
         lastPoint = touch.location(in: imgView)
 ```
-현재 발생한 터치 이벤트를 가지고 옵니다.
+현재 발생한 터치 이벤트를 가지고 옵니다.     
 터치된 위치를 lastPoint에 할당합니다.
 
 ```
@@ -83,7 +83,7 @@
 선 끝 모양을 라운드로 설정합니다.   
 선 두께를 설정합니다.    
 현재 발생한 터치 이벤트를 가지고 옵니다. 
-터치된 좌표를 currPoint로 가지고 옵니다.
+터치된 좌표를 currPoint로 가지고 옵니다.     
 현재 imgView에 있는 전체 이미지를 imgView의 크기로 그립니다.   
 lastPoint 위치로 시작 위치를 이동합니다.   
 lastPoint에서 currPoint까지 선을 추가합니다.   
@@ -167,8 +167,8 @@ guard let numberValue = sender.title(for: .normal)
                     break
                 }
 ```
-파라미터로 전달받은 연산자를 계산하고 계산한 결과값을 화면에 표시합니다.
-여기서 self.displayNumber = "" 는 또 다음 피연산자를 받기 위해 집어넣었습니다.
+파라미터로 전달받은 연산자를 계산하고 계산한 결과값을 화면에 표시합니다.        
+여기서 self.displayNumber = "" 는 또 다음 피연산자를 받기 위해 집어넣었습니다.     
 Double로 피연산자의 형변환을 시켜줍니다. 
 연산자에 따라 첫 번째 피연산자와 두 번째 피연산자 계산합니다.
 
